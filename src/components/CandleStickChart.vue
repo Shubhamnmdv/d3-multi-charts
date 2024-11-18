@@ -152,46 +152,46 @@ export default {
         .attr("stroke", (d) => (d.Open > d.Close ? "red" : "green"));
 
       // / Add dashed vertical lines and flag labels
-      const flaggedData = data.filter((d) => d.flag); // Filter data with flags
-      flaggedData.forEach((d) => {
-        const xPosition = xScale(d.Date);
-        const yStart = 30; // Start of the line (adjust as necessary)
+      // const flaggedData = data.filter((d) => d.flag); // Filter data with flags
+      // flaggedData.forEach((d) => {
+      //   const xPosition = xScale(d.Date);
+      //   const yStart = 30; // Start of the line (adjust as necessary)
 
-        // Dashed vertical line
-        svg
-          .append("line")
-          .attr("class", "flag-line")
-          .attr("x1", xPosition)
-          .attr("x2", xPosition)
-          .attr("y1", yStart) // Start slightly below the top
-          .attr("y2", height) // End slightly above the bottom
-          .attr("stroke", "blue")
-          .attr("stroke-dasharray", "4,2");
+      //   // Dashed vertical line
+      //   svg
+      //     .append("line")
+      //     .attr("class", "flag-line")
+      //     .attr("x1", xPosition)
+      //     .attr("x2", xPosition)
+      //     .attr("y1", yStart) // Start slightly below the top
+      //     .attr("y2", height) // End slightly above the bottom
+      //     .attr("stroke", "blue")
+      //     .attr("stroke-dasharray", "4,2");
 
-        // Square box for the flag label
-        const labelSize = 40; // Square size
-        svg
-          .append("rect")
-          .attr("class", "flag-label-box")
-          .attr("x", xPosition - labelSize / 2)
-          .attr("y", yStart - labelSize - 5) // Position above the top of the line
-          .attr("width", labelSize)
-          .attr("height", labelSize)
-          .attr("fill", "blue")
-          .attr("rx", 4) // Rounded corners
-          .attr("ry", 4);
+      //   // Square box for the flag label
+      //   const labelSize = 40; // Square size
+      //   svg
+      //     .append("rect")
+      //     .attr("class", "flag-label-box")
+      //     .attr("x", xPosition - labelSize / 2)
+      //     .attr("y", yStart - labelSize - 5) // Position above the top of the line
+      //     .attr("width", labelSize)
+      //     .attr("height", labelSize)
+      //     .attr("fill", "blue")
+      //     .attr("rx", 4) // Rounded corners
+      //     .attr("ry", 4);
 
-        // Text inside the square box
-        svg
-          .append("text")
-          .attr("class", "flag-label-text")
-          .attr("x", xPosition)
-          .attr("y", yStart - labelSize / 2 - 5) // Align with the box
-          .attr("text-anchor", "middle")
-          .attr("fill", "white")
-          .attr("font-size", "12px")
-          .text("Flag"); // Display "Flag" text
-      });
+      //   // Text inside the square box
+      //   svg
+      //     .append("text")
+      //     .attr("class", "flag-label-text")
+      //     .attr("x", xPosition)
+      //     .attr("y", yStart - labelSize / 2 - 5) // Align with the box
+      //     .attr("text-anchor", "middle")
+      //     .attr("fill", "white")
+      //     .attr("font-size", "12px")
+      //     .text("Flag"); // Display "Flag" text
+      // });
 
       // Mini-map and brush logic remains unchanged
       // Draw mini-map area chart
