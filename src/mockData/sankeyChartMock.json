@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    { "id": "Revenue", "value": "$30.0B", "subValue": "+15% Q/Q", "color": "#000000" },
+    { "id": "Data Center", "value": "$26.3B", "subValue": "+16% Q/Q", "color": "#FF6600" },
+    { "id": "Gaming", "value": "$2.9B", "subValue": "+9% Q/Q", "color": "#00CC66" },
+    { "id": "Professional Visualization", "value": "$0.5B", "subValue": "+6% Q/Q", "color": "#CC0066" },
+    { "id": "Automotive", "value": "$0.3B", "subValue": "+5% Q/Q", "color": "#3399FF" },
+    { "id": "OEM & Other", "value": "$0.1B", "subValue": "+13% Q/Q", "color": "#9933FF" },
+    { "id": "Gross profit", "value": "$22.6B", "subValue": "75% margin", "color": "#00FF66" },
+    { "id": "Cost of revenue", "value": "$7.5B", "subValue": "+16% Q/Q", "color": "#FF66FF" },
+    { "id": "Operating expenses", "value": "$3.9B", "subValue": "+6% Q/Q", "color": "#666666" },
+    { "id": "Operating profit", "value": "$18.6B", "subValue": "62% margin", "color": "#FF3366" },
+    { "id": "Net profit", "value": "$16.6B", "subValue": "55% margin", "color": "#6666FF" },
+    { "id": "Research & Development", "value": "$3.1B", "subValue": "10% of revenue", "color": "#99CC33" },
+    { "id": "Sales, General & Admin", "value": "$0.8B", "subValue": "3% of revenue", "color": "#66CCFF" },
+    { "id": "Tax", "value": "$2.6B", "subValue": "+2% Q/Q", "color": "#003399" },
+    { "id": "Other", "value": "$0.6B", "subValue": "+5% Q/Q", "color": "#FF9966" }
+  ],
+  "links": [
+    { "source": "Revenue", "target": "Data Center", "value": 2.6 },
+    { "source": "Revenue", "target": "Gaming", "value": 2.9 },
+    { "source": "Revenue", "target": "Professional Visualization", "value": 2.5 },
+    { "source": "Revenue", "target": "Automotive", "value": 0.3 },
+    { "source": "Revenue", "target": "OEM & Other", "value": 2.1 },
+    { "source": "Revenue", "target": "Gross profit", "value": 3.6 },
+    { "source": "Revenue", "target": "Shubham", "value": 3.6 },
+    { "source": "Gross profit", "target": "Cost of revenue", "value": 7.5 },
+    { "source": "Gross profit", "target": "Operating expenses", "value": 3.9 },
+    { "source": "Gross profit", "target": "Operating profit", "value": 1.6 },
+    { "source": "Gross profit", "target": "Other", "value": 0.6 },
+    { "source": "Operating expenses", "target": "Research & Development", "value": 3.1 },
+    { "source": "Operating expenses", "target": "Sales, General & Admin", "value": 1.8 },
+    { "source": "Operating expenses", "target": "Tax", "value": 2.6 },
+    { "source": "Operating profit", "target": "Net profit", "value": 6.6 }
+  ]
+}
