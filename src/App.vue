@@ -2,23 +2,27 @@
 import sankeychart from "./components/SankeyChart.vue";
 import lineChartTimeline from "./components/LineChartTimeline.vue";
 import candleStickChart from "./components/CandleStickChart.vue";
+import MultiStackLineChart from "./components/MultiStackLineChart.vue";
 import backupChart from "./components/BackupChart.vue";
 </script>
 
 <template>
   <div class="wrapper">
-    <h1 class="heading">All Charts</h1>
+    <!-- <h1 class="heading">All Charts</h1> -->
     <!-- <div class="card card-sankey">
         <sankeychart></sankeychart>
       </div> -->
-    <div class="card card-line-timeline">
+    <!-- <div class="card card-line-timeline">
       <lineChartTimeline></lineChartTimeline>
     </div>
     <div class="card card-line-chart-backup">
       <backupChart></backupChart>
-    </div>
-    <div class="card card-candlestick">
+    </div> -->
+    <!-- <div class="card card-candlestick">
       <candleStickChart></candleStickChart>
+    </div> -->
+    <div class="card card-candlestick">
+      <MultiStackLineChart></MultiStackLineChart>
     </div>
   </div>
 </template>
