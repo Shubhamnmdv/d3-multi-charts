@@ -31,8 +31,8 @@
     methods: {
       drawChart() {
         const margin = { top: 10, right: 30, bottom: 20, left: 50 };
-        const width = 1400 - margin.left - margin.right;
-        const height = 600 - margin.top - margin.bottom;
+        const width = 1100 - margin.left - margin.right;
+        const height = 400 - margin.top - margin.bottom;
   
         // Remove any existing chart
         d3.select("#chart").select("svg").remove();
