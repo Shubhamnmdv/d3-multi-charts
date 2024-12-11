@@ -31,7 +31,7 @@
     methods: {
       drawChart() {
         const margin = { top: 10, right: 30, bottom: 20, left: 50 };
-        const width = 1200 - margin.left - margin.right;
+        const width = 1400 - margin.left - margin.right;
         const height = 600 - margin.top - margin.bottom;
   
         // Remove any existing chart
@@ -75,13 +75,13 @@
           .scaleBand()
           .domain(subgroups)
           .range([0, x.bandwidth()])
-          .padding(0.05);
+          .padding(0.08);
   
         // Color scale
         const color = d3
           .scaleOrdinal()
           .domain(subgroups)
-          .range(["#e41a1c", "#377eb8", "#4daf4a"]);
+          .range(["#4c58d9", "#48d2a0", "#a889ff",  "#f6b100"]);
   
         // Show bars
         svg
@@ -101,7 +101,9 @@
           .attr("y", (d) => y(d.value))
           .attr("width", xSubgroup.bandwidth())
           .attr("height", (d) => height - y(d.value))
-          .attr("fill", (d) => color(d.key));
+          .attr("fill", (d) => color(d.key))
+        //   .attr("rx", 10) // Rounded corners
+        //   .attr("ry", 10); // Rounded corners
       },
     },
   };

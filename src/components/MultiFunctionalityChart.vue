@@ -69,16 +69,22 @@ html {
   flex-direction: row;
   width: 100%; /* Ensures the container spans the full width */
   box-sizing: border-box;
+  padding: 10px;
 }
 
-.chart-container {
-  flex: 7; /* 70% of the width */
+.chart-container { 
+  flex-basis: 80%;
+  /* flex: 7; */
   padding: 10px;
-  background-color: #f9f9f9; /* Optional for visualization */
+  background-color: #f8faff; /* Optional for visualization */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: auto;
+  
 }
 
 .filter-container {
-  flex: 3; /* 30% of the width */
+flex-basis: 20%; 
   padding: 20px;
   background-color: #f8faff; /* Soft blue background color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */

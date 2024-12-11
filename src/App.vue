@@ -32,9 +32,9 @@ import MultiFunctionalityChart from "./components/MultiFunctionalityChart.vue";
     <!-- <div class="card card-analyst-price-targets">
         <AnalystPriceTargets></AnalystPriceTargets>
     </div> -->
-    <!-- <div class="card card-analyst-price-targets"> -->
-        <!-- <MiniBarChart></MiniBarChart> -->
-    <!-- </div> -->
+    <!-- <div class="card card-analyst-price-targets">
+        <MiniBarChart></MiniBarChart>
+    </div> -->
      <!-- <SparkLineChart></SparkLineChart> -->
      <MultiFunctionalityChart></MultiFunctionalityChart>
 
