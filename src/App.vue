@@ -4,6 +4,11 @@ import lineChartTimeline from "./components/LineChartTimeline.vue";
 import candleStickChart from "./components/CandleStickChart.vue";
 import MultiStackLineChart from "./components/MultiStackLineChart.vue";
 import backupChart from "./components/BackupChart.vue";
+import AnalystPriceTargets from "./components/AnalystPriceTargets.vue";
+import MiniBarChart from "./components/MiniBarChart.vue";
+import SparkLineChart from "./components/SparkLineChart.vue";
+import MultiFunctionalityChart from "./components/MultiFunctionalityChart.vue";
+
 </script>
 
 <template>
@@ -21,9 +26,18 @@ import backupChart from "./components/BackupChart.vue";
     <!-- <div class="card card-candlestick">
       <candleStickChart></candleStickChart>
     </div> -->
-    <div class="card card-candlestick">
+    <!-- <div class="card card-candlestick">
       <MultiStackLineChart></MultiStackLineChart>
-    </div>
+    </div> -->
+    <!-- <div class="card card-analyst-price-targets">
+        <AnalystPriceTargets></AnalystPriceTargets>
+    </div> -->
+    <!-- <div class="card card-analyst-price-targets"> -->
+        <!-- <MiniBarChart></MiniBarChart> -->
+    <!-- </div> -->
+     <!-- <SparkLineChart></SparkLineChart> -->
+     <MultiFunctionalityChart></MultiFunctionalityChart>
+
   </div>
 </template>
 

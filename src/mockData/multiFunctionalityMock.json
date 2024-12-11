@@ -1,0 +1,50 @@
+[
+  {
+    "xAxisLabel": "Group 1",
+    "barFirst": 45,
+    "barSecond": 65,
+    "barThird": 35
+  },
+  {
+    "xAxisLabel": "Group 2",
+    "barFirst": 55,
+    "barSecond": 40,
+    "barThird": 70
+  },
+  {
+    "xAxisLabel": "Group 3",
+    "barFirst": 50,
+    "barSecond": 75,
+    "barThird": 60
+  },
+  {
+    "xAxisLabel": "Group 4",
+    "barFirst": 30,
+    "barSecond": 50,
+    "barThird": 80
+  },
+  {
+    "xAxisLabel": "Group 5",
+    "barFirst": 70,
+    "barSecond": 45,
+    "barThird": 55
+  },
+  {
+    "xAxisLabel": "Group 6",
+    "barFirst": 40,
+    "barSecond": 65,
+    "barThird": 85
+  },
+  {
+    "xAxisLabel": "Group 7",
+    "barFirst": 65,
+    "barSecond": 35,
+    "barThird": 75
+  },
+  {
+    "xAxisLabel": "Group 8",
+    "barFirst": 55,
+    "barSecond": 60,
+    "barThird": 45
+  }
+]
