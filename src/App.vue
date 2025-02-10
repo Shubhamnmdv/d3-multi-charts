@@ -8,36 +8,47 @@ import AnalystPriceTargets from "./components/AnalystPriceTargets.vue";
 import MiniBarChart from "./components/MiniBarChart.vue";
 import SparkLineChart from "./components/SparkLineChart.vue";
 import MultiFunctionalityChart from "./components/MultiFunctionalityChart.vue";
+import FootballFieldChart from "./components/FootballFieldChart.vue";
+import LineChartWithTorch from "./components/LineChartWithTorch.vue";
+import InsiderTrandingVolume from "./components/InsiderTrandingVolume.vue";
 
 </script>
 
 <template>
   <div class="wrapper">
     <!-- <h1 class="heading">All Charts</h1> -->
-    <!-- <div class="card card-sankey">
+    <div class="card card-sankey">
         <sankeychart></sankeychart>
-      </div> -->
-    <!-- <div class="card card-line-timeline">
+      </div>
+    <div class="card card-line-timeline">
       <lineChartTimeline></lineChartTimeline>
     </div>
     <div class="card card-line-chart-backup">
       <backupChart></backupChart>
-    </div> -->
-    <!-- <div class="card card-candlestick">
+    </div>
+    <div class="card card-candlestick">
       <candleStickChart></candleStickChart>
-    </div> -->
-    <!-- <div class="card card-candlestick">
+    </div>
+    <div class="card card-candlestick">
       <MultiStackLineChart></MultiStackLineChart>
-    </div> -->
-    <!-- <div class="card card-analyst-price-targets">
+    </div>
+    <div class="card card-analyst-price-targets">
         <AnalystPriceTargets></AnalystPriceTargets>
-    </div> -->
-    <!-- <div class="card card-analyst-price-targets">
+    </div>
+    <div class="card card-analyst-price-targets">
         <MiniBarChart></MiniBarChart>
-    </div> -->
-     <!-- <SparkLineChart></SparkLineChart> -->
+    </div>
+     <SparkLineChart></SparkLineChart>
      <MultiFunctionalityChart></MultiFunctionalityChart>
-
+    <div class="card card-candlestick">
+        <FootballFieldChart></FootballFieldChart>
+    </div>
+    <div class="card card-line-chart-backup">
+      <LineChartWithTorch></LineChartWithTorch>
+    </div>
+    <div class="card card-line-chart-backup">
+      <InsiderTrandingVolume></InsiderTrandingVolume>
+    </div>
   </div>
 </template>
 
@@ -49,7 +60,7 @@ import MultiFunctionalityChart from "./components/MultiFunctionalityChart.vue";
 }
 
 .card {
-  width: 100%; /* Full width of the container */
+  width: auto; /* Full width of the container */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */

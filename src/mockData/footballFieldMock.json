@@ -1,0 +1,37 @@
+[
+  {
+    "label": "52 week range",
+    "min": 16.93,
+    "max": 19.19
+  },
+  {
+    "label": "Equity research",
+    "min": 15.93,
+    "max": 19.09
+  },
+  {
+    "label": "EV / EBITDA trading comps",
+    "min": 17.77,
+    "max": 19.88
+  },
+  {
+    "label": "DCF",
+    "min": 17.49,
+    "max": 20.87
+  },
+  {
+    "label": "DCF with synergies",
+    "min": 19.56,
+    "max": 23.22
+  },
+  {
+    "label": "LBO",
+    "min": 12.08,
+    "max": 12.79
+  },
+  {
+    "label": "EV / LTM EBITDA transaction comps",
+    "min": 20.84,
+    "max": 24.40
+  }
+]

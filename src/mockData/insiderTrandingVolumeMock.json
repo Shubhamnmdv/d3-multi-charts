@@ -1,0 +1,97 @@
+[
+  {
+    "timePeriod": "0-3",
+    "sharesSold": {
+      "totalShares": 66000,
+      "approxValue": "CA$4.4m",
+      "soldBy": {
+        "individuals": [
+          { "name": "Person A", "shares": 20000 },
+          { "name": "Person B", "shares": 20000 }
+        ],
+        "companies": [
+          { "name": "Company X", "shares": 16000 },
+          { "name": "Company Y", "shares": 15000 }
+        ]
+      }
+    },
+    "sharesBought": {
+      "totalShares": 25000,
+      "approxValue": "CA$1.5m",
+      "boughtBy": {
+        "individuals": [
+          { "name": "Person C", "shares": 12000 },
+          { "name": "Person D", "shares": 20000 }
+        ],
+        "companies": [{ "name": "Company Z", "shares": 10000 }]
+      }
+    }
+  },
+  {
+    "timePeriod": "3-6",
+    "sharesSold": {
+      "totalShares": 0,
+      "approxValue": null,
+      "soldBy": {
+        "individuals": [],
+        "companies": [{ "name": "Company Y", "shares": 15000 }]
+      }
+    },
+    "sharesBought": {
+      "totalShares": 38170,
+      "approxValue": "CA$2.3m",
+      "boughtBy": {
+        "individuals": [
+          { "name": "Person E", "shares": 20000 },
+          { "name": "Person F", "shares": 8000 }
+        ],
+        "companies": [{ "name": "Company W", "shares": 10170 }
+      ]
+      }
+    }
+  },
+  {
+    "timePeriod": "6-9",
+    "sharesSold": {
+      "totalShares": 0,
+      "approxValue": null,
+      "soldBy": {
+        "individuals": [],
+        "companies": []
+      }
+    },
+    "sharesBought": {
+      "totalShares": 21146,
+      "approxValue": "CA$1.4m",
+      "boughtBy": {
+        "individuals": [
+          { "name": "Person G", "shares": 10000 },
+          { "name": "Person H", "shares": 1146 }
+        ],
+        "companies": [{ "name": "Company V", "shares": 10000 }]
+      }
+    }
+  },
+  {
+    "timePeriod": "9-12",
+    "sharesSold": {
+      "totalShares": 0,
+      "approxValue": null,
+      "soldBy": {
+        "individuals": [],
+        "companies": []
+      }
+    },
+    "sharesBought": {
+      "totalShares": 48240,
+      "approxValue": "CA$2.8m",
+      "boughtBy": {
+        "individuals": [
+          { "name": "Person I", "shares": 20000 },
+          { "name": "Person J", "shares": 10000 }
+        ],
+        "companies": [{ "name": "Company U", "shares": 18240 }]
+      }
+    }
+  }
+]
