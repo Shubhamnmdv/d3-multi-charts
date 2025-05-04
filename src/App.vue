@@ -11,6 +11,8 @@ import MultiFunctionalityChart from "./components/MultiFunctionalityChart.vue";
 import FootballFieldChart from "./components/FootballFieldChart.vue";
 import LineChartWithTorch from "./components/LineChartWithTorch.vue";
 import InsiderTrandingVolume from "./components/InsiderTrandingVolume.vue";
+import ForceDirectedGraph from "./components/ForceDirectedGraph.vue";
+
 
 </script>
 
@@ -18,6 +20,9 @@ import InsiderTrandingVolume from "./components/InsiderTrandingVolume.vue";
   <div class="wrapper">
     <!-- <h1 class="heading">All Charts</h1> -->
     <div class="card card-sankey">
+        <ForceDirectedGraph></ForceDirectedGraph>
+    </div>
+    <!-- <div class="card card-sankey">
         <sankeychart></sankeychart>
       </div>
     <div class="card card-line-timeline">
@@ -48,7 +53,7 @@ import InsiderTrandingVolume from "./components/InsiderTrandingVolume.vue";
     </div>
     <div class="card card-line-chart-backup">
       <InsiderTrandingVolume></InsiderTrandingVolume>
-    </div>
+    </div> -->
   </div>
 </template>
 
