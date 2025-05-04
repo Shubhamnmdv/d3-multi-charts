@@ -1,5 +1,6 @@
 <template>
     <div>
+      <div id="tooltip" class="tooltip" style="opacity: 0;"></div>
       <svg ref="chart"></svg>
     </div>
   </template>
@@ -20,48 +21,57 @@
         const height = 680;
   
         const color = d3.scaleOrdinal(d3.schemeCategory10);
-        const links = data.links.map(d => ({ ...d }));
+        const nodeIds = new Set(data.nodes.map(d => d.id));
+        const links = data.links
+        .filter(d => nodeIds.has(d.source) && nodeIds.has(d.target))
+        .map(d => ({ ...d }));
         const nodes = data.nodes.map(d => ({ ...d }));
   
-        const svg = d3.select(this.$refs.chart)
-          .attr("width", width)
-          .attr("height", height)
-          .attr("viewBox", [-width / 2, -height / 2, width, height])
-          .style("max-width", "100%")
-          .style("height", "auto");
-  
+          const svg = d3.select(this.$refs.chart)
+            .attr("width", "100%")
+            .attr("height", height)
+            .attr("viewBox", [0, 0, width, height])
+            .call(
+              d3.zoom()
+                .scaleExtent([0.1, 8])
+                .on("zoom", (event) => {
+                  g.attr("transform", event.transform);
+                })
+            );
+
+        const g = svg.append("g"); // Container for nodes + links
+
         const simulation = d3.forceSimulation(nodes)
-          .force("link", d3.forceLink(links).id(d => d.id))
-          .force("charge", d3.forceManyBody())
-          .force("x", d3.forceX())
-          .force("y", d3.forceY());
-  
-        const link = svg.append("g")
+          .force("link", d3.forceLink(links).id(d => d.id).distance(120))
+          .force("charge", d3.forceManyBody().strength(-200))
+          .force("center", d3.forceCenter(width / 2, height / 2));
+
+        const link = g.append("g")
           .attr("stroke", "#999")
           .attr("stroke-opacity", 0.6)
           .selectAll("line")
           .data(links)
           .join("line")
-          .attr("stroke-width", d => Math.sqrt(d.value || 1));
-  
-        const node = svg.append("g")
+          .attr("stroke-width", 1.5);
+
+        const node = g.append("g")
           .attr("stroke", "#fff")
           .attr("stroke-width", 1.5)
           .selectAll("circle")
           .data(nodes)
           .join("circle")
-          .attr("r", 5)
-          .attr("fill", d => color(d.group));
+          .attr("r", 12)
+          .attr("fill", d => color(d.group?.rdf_Property || "default"))
+          .call(
+            d3.drag()
+              .on("start", dragstarted)
+              .on("drag", dragged)
+              .on("end", dragended)
+          );
+
   
         node.append("title")
-          .text(d => d.id);
-  
-        node.call(
-          d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended)
-        );
+          .text(d => d.group?.identifier || d.id.split("#").pop());
   
         simulation.on("tick", () => {
           link
@@ -91,6 +101,26 @@
           event.subject.fx = null;
           event.subject.fy = null;
         }
+
+        const tooltip = d3.select("#tooltip");
+
+        node.on("mouseover", (event, d) => {
+            tooltip
+              .style("opacity", 1)
+              .html(`
+                <strong>${d.group?.identifier || d.id.split("#").pop()}</strong><br/>
+                <em>${d.group?.rdfs_comment || d.group?.rdfs_isDefinedBy || "No description."}</em>
+              `);
+          })
+          .on("mousemove", (event) => {
+            tooltip
+              .style("left", (event.pageX + 10) + "px")
+              .style("top", (event.pageY + 10) + "px");
+          })
+          .on("mouseout", () => {
+            tooltip.style("opacity", 0);
+          });
+
       }
     }
   };
@@ -100,5 +130,18 @@
   svg {
     background: #fafafa;
   }
+
+  .tooltip {
+    position: absolute;
+    background-color: white;
+    padding: 6px 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
   </style>
   
