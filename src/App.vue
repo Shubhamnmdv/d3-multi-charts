@@ -13,18 +13,23 @@ import LineChartWithTorch from "./components/LineChartWithTorch.vue";
 import InsiderTrandingVolume from "./components/InsiderTrandingVolume.vue";
 import ForceDirectedGraph from "./components/ForceDirectedGraph.vue";
 import DragAndDropUpload from "./components/DragAndDropUpload.vue";
+import LineChartHightChart from "./components/Highcharts/LineChartHightChart.vue";
+import InvertedTreegraphHighchart from "./components/Highcharts/InvertedTreegraphHighchart.vue";
+
 
 </script>
 
 <template>
-  <div class="wrapper">
+  <!-- <div class="wrapper"> -->
     <!-- <h1 class="heading">All Charts</h1> -->
-    <!-- <div class="card card-sankey"> -->
-        <DragAndDropUpload></DragAndDropUpload>
-    <!-- </div> -->
     <!-- <div class="card card-sankey">
-        <ForceDirectedGraph></ForceDirectedGraph>
+      <LineChartHightChart></LineChartHightChart>
+        <DragAndDropUpload></DragAndDropUpload>
     </div> -->
+    <div class="card card-sankey">
+        <!-- <ForceDirectedGraph></ForceDirectedGraph> -->
+        <InvertedTreegraphHighchart></InvertedTreegraphHighchart>
+    </div>
     <!-- <div class="card card-sankey">
         <sankeychart></sankeychart>
       </div>
@@ -57,7 +62,7 @@ import DragAndDropUpload from "./components/DragAndDropUpload.vue";
     <div class="card card-line-chart-backup">
       <InsiderTrandingVolume></InsiderTrandingVolume>
     </div> -->
-  </div>
+  <!-- </div> -->
 </template>
 
 <style scoped>
