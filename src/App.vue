@@ -13,6 +13,7 @@ import LineChartWithTorch from "./components/LineChartWithTorch.vue";
 import InsiderTrandingVolume from "./components/InsiderTrandingVolume.vue";
 import ForceDirectedGraph from "./components/ForceDirectedGraph.vue";
 import DragAndDropUpload from "./components/DragAndDropUpload.vue";
+import EscalentAssignment from "./components/escalentAssignment.vue";
 import LineChartHightChart from "./components/Highcharts/LineChartHightChart.vue";
 import InvertedTreegraphHighchart from "./components/Highcharts/InvertedTreegraphHighchart.vue";
 
@@ -20,20 +21,23 @@ import InvertedTreegraphHighchart from "./components/Highcharts/InvertedTreegrap
 </script>
 
 <template>
-  <!-- <div class="wrapper"> -->
-    <!-- <h1 class="heading">All Charts</h1> -->
-    <!-- <div class="card card-sankey">
+   <div class="wrapper"> 
+   <!-- <h1 class="heading">All Charts</h1> -->
+    <!-- <div class="card card-sankey"> -->
+      <EscalentAssignment></EscalentAssignment>
+    <!-- </div> -->
+   <!-- <div class="card card-sankey">
       <LineChartHightChart></LineChartHightChart>
         <DragAndDropUpload></DragAndDropUpload>
-    </div> -->
-    <div class="card card-sankey">
-        <!-- <ForceDirectedGraph></ForceDirectedGraph> -->
-        <InvertedTreegraphHighchart></InvertedTreegraphHighchart>
     </div>
+    <div class="card card-sankey">
+        <ForceDirectedGraph></ForceDirectedGraph>
+        <InvertedTreegraphHighchart></InvertedTreegraphHighchart>
+    </div> -->
     <!-- <div class="card card-sankey">
         <sankeychart></sankeychart>
-      </div>
-    <div class="card card-line-timeline">
+      </div> -->
+    <!-- <div class="card card-line-timeline">
       <lineChartTimeline></lineChartTimeline>
     </div>
     <div class="card card-line-chart-backup">
@@ -62,7 +66,7 @@ import InvertedTreegraphHighchart from "./components/Highcharts/InvertedTreegrap
     <div class="card card-line-chart-backup">
       <InsiderTrandingVolume></InsiderTrandingVolume>
     </div> -->
-  <!-- </div> -->
+    </div>
 </template>
 
 <style scoped>
@@ -89,7 +93,7 @@ import InvertedTreegraphHighchart from "./components/Highcharts/InvertedTreegrap
 
 /* Custom styles for individual cards */
 .card-sankey {
-  background-color: #ffe6e6; /* Light red */
+  background-color: #f0f2f5; /* Light red */
 }
 
 .card-line-timeline {
